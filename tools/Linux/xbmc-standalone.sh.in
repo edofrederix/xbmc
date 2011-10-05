@@ -18,16 +18,21 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 
+<<<<<<< HEAD
 prefix="@prefix@"
 exec_prefix="@exec_prefix@"
 bindir="@bindir@"
 XBMC="${bindir}/xbmc --standalone $@"
+=======
+XBMC="xbmc -p \"$@\""
+>>>>>>> 4e96412... Starting up XBMC in portable mode, not standalone
 
 @XBMC_STANDALONE_SH_PULSE@
 
 LOOP=1
 CRASHCOUNT=0
 LASTSUCCESSFULSTART=$(date +%s)
+HOME=/home/mpossible
 
 while [ $(( $LOOP )) = "1" ]
 do
