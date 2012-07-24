@@ -39,6 +39,7 @@ public:
   // CWinSystemBase
   virtual bool InitWindowSystem();
   virtual bool DestroyWindowSystem();
+  virtual bool ShowDesktop();
   virtual bool CreateNewWindow(const CStdString& name, bool fullScreen, RESOLUTION_INFO& res, PHANDLE_EVENT_FUNC userFunction);
   virtual bool DestroyWindow();
   virtual bool ResizeWindow(int newWidth, int newHeight, int newLeft, int newTop);

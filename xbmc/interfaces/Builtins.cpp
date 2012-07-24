@@ -108,6 +108,7 @@ const BUILT_IN commands[] = {
   { "Restart",                    false,  "Restart the xbox (power cycle)" },
   { "ShutDown",                   false,  "Shutdown the xbox" },
   { "Powerdown",                  false,  "Powerdown system" },
+  { "Desktop",                    false,  "Go to mPossible desktop" },
   { "Quit",                       false,  "Quit XBMC" },
   { "Hibernate",                  false,  "Hibernates the system" },
   { "Suspend",                    false,  "Suspends the system" },
@@ -254,6 +255,10 @@ int CBuiltins::Execute(const CStdString& execString)
   else if (execute.Equals("powerdown"))
   {
     g_application.getApplicationMessenger().Powerdown();
+  }
+  else if (execute.Equals("desktop"))
+  {
+    g_application.getApplicationMessenger().Desktop();
   }
   else if (execute.Equals("restartapp"))
   {
