@@ -454,13 +454,10 @@ void CGUISettings::Initialize()
 #ifdef __APPLE__
   AddString(ao, "audiooutput.audiodevice", 545, "Default", SPIN_CONTROL_TEXT);
 #elif defined(_LINUX)
-  AddSeparator(ao, "audiooutput.sep1");
-  AddString(ao, "audiooutput.audiodevice", 545, "default", SPIN_CONTROL_TEXT);
-  AddString(ao, "audiooutput.customdevice", 1300, "", EDIT_CONTROL_INPUT);
-  AddSeparator(ao, "audiooutput.sep2");
-  AddString(ao, "audiooutput.passthroughdevice", 546, "iec958", SPIN_CONTROL_TEXT);
-  AddString(ao, "audiooutput.custompassthrough", 1301, "", EDIT_CONTROL_INPUT);
-  AddSeparator(ao, "audiooutput.sep3");
+  AddString(NULL, "audiooutput.audiodevice", 545, "custom", SPIN_CONTROL_TEXT);
+  AddString(NULL, "audiooutput.customdevice", 1300, "", EDIT_CONTROL_INPUT);
+  AddString(NULL, "audiooutput.passthroughdevice", 546, "custom", SPIN_CONTROL_TEXT);
+  AddString(NULL, "audiooutput.custompassthrough", 1301, "", EDIT_CONTROL_INPUT);
 #elif defined(_WIN32)
   AddString(ao, "audiooutput.audiodevice", 545, "Default", SPIN_CONTROL_TEXT);
 #endif
@@ -1272,6 +1269,32 @@ void CGUISettings::LoadFromXML(TiXmlElement *pRootElement, mapIter &it, bool adv
 
 void CGUISettings::SaveXML(TiXmlNode *pRootNode)
 {
+  
+  //mPossible audiooutput settings
+  int audioMode = GetInt("audiooutput.mode");
+  CLog::Log(LOGDEBUG, "Saving audio output device for %i", audioMode);
+  if (audioMode == 0)
+  {
+    //we have analog sound, let's connect to 'analoog' alsa device
+    SetString("audiooutput.customdevice", "analoog");
+    SetString("audiooutput.custompassthrough", "analoog");
+    CLog::Log(LOGDEBUG, "Audio output: 'analoog'");
+  }
+  if (audioMode == 1)
+  {
+    //we have digital sound, let's connect to 'digitaal' alsa device
+    SetString("audiooutput.customdevice", "digitaal");
+    SetString("audiooutput.custompassthrough", "digitaal");
+    CLog::Log(LOGDEBUG, "Audio output: 'digitaal'");
+  }
+  if (audioMode == 2)
+  {
+    //we have hdmi sound, let's connect to 'hdmi' alsa device
+    SetString("audiooutput.customdevice", "HDMI");
+    SetString("audiooutput.custompassthrough", "HDMI");
+    CLog::Log(LOGDEBUG, "Audio output: 'HDMI'");
+  }
+  
   for (mapIter it = settingsMap.begin(); it != settingsMap.end(); it++)
   {
     // don't save advanced settings
