@@ -4366,6 +4366,11 @@ bool CApplication::WakeUpScreenSaver()
     return false;
 }
 
+void CApplication::CheckHardwareCursor()
+{
+  g_Windowing.ResetHWCursor();
+}
+
 void CApplication::CheckScreenSaverAndDPMS()
 {
   if (!m_dpmsIsActive)
@@ -4832,6 +4837,11 @@ void CApplication::ProcessSlow()
 
   // Check if we need to activate the screensaver / DPMS.
   CheckScreenSaverAndDPMS();
+  
+  #if defined(_LINUX)
+    // Check for hardwarecursor
+    CheckHardwareCursor();
+  #endif
 
   // Check if we need to shutdown (if enabled).
 #ifdef __APPLE__

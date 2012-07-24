@@ -46,6 +46,7 @@ public:
   virtual void UpdateResolutions();
   virtual int  GetNumScreens() { return 1; }
   virtual void ShowOSMouse(bool show);
+  virtual void ResetHWCursor();
   virtual void ResetOSScreensaver();
 
   virtual void NotifyAppActiveChange(bool bActivated);
@@ -60,6 +61,7 @@ public:
   // Local to WinSystemX11 only
   Display*  GetDisplay() { return m_dpy; }
   GLXWindow GetWindow() { return m_glWindow; }
+  bool      GetDisplayStatus() { return m_dpStatus; }
 
 protected:
   bool RefreshGlxContext();
@@ -70,6 +72,9 @@ protected:
   GLXContext   m_glContext;
   GLXWindow    m_glWindow;
   Window       m_wmWindow;
+  bool         m_dpStatus;
+  int          m_iCycles;
+  bool         m_bPerformCheck;
   Display*     m_dpy;
   bool         m_bWasFullScreenBeforeMinimize;
   int          m_RREventBase;

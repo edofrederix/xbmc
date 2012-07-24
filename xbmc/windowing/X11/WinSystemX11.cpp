@@ -64,6 +64,9 @@ bool CWinSystemX11::InitWindowSystem()
 {
   if ((m_dpy = XOpenDisplay(NULL)))
   {
+    m_dpStatus = true;
+    m_bPerformCheck = false;
+    m_iCycles = 0;
 
     SDL_EnableUNICODE(1);
     // set repeat to 10ms to ensure repeat time < frame time
@@ -413,6 +416,67 @@ bool CWinSystemX11::RefreshGlxContext()
 void CWinSystemX11::ShowOSMouse(bool show)
 {
   SDL_ShowCursor(show ? 1 : 0);
+}
+
+static bool
+xbmcActiveSession()
+{
+  CLog::Log(LOGINFO, "Performing session check");
+  FILE *fpipe;
+  const char *command = "/usr/lib/xbmc/check-session";
+  char line[16];
+  bool is_active = false;
+
+  if ( !(fpipe = (FILE*)popen(command,"r")) )
+  {
+    CLog::Log(LOGERROR, "Cannot check session status");
+    return false;
+  }
+
+  while ( fgets( line, sizeof line, fpipe))
+  {
+    //first line contains info
+    if(strncmp(line,"TRUE",4) == 0)
+    {
+      is_active = true;
+    }
+    break;
+  }
+
+  pclose(fpipe);
+  return is_active;
+}
+
+void CWinSystemX11::ResetHWCursor()
+{
+  //run this thing every 8 cycles
+  if (m_iCycles == 8)
+  {
+    if (m_bPerformCheck)
+    {
+      bool is_active = xbmcActiveSession();
+      if(!m_dpStatus && is_active)
+      {
+        //xbmc was inactive, and now became active. Let's reset the screen to prevent cursor problems.
+        m_dpStatus = is_active;
+        RESOLUTION_INFO& desktop = g_settings.m_ResInfo[RES_DESKTOP];
+        SetFullScreen(true, desktop, false);
+        CLog::Log(LOGINFO, "Session became active, reset the screen");
+
+        //disable status check (only run when we are on desktop)
+        m_bPerformCheck = false;
+      }
+      else
+      {
+        m_dpStatus = is_active;
+      }
+      m_iCycles = 0;
+    }
+  }
+  else
+  {
+    m_iCycles++;
+  }
 }
 
 void CWinSystemX11::ResetOSScreensaver()

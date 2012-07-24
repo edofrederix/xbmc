@@ -153,6 +153,8 @@ public:
   bool OnAppCommand(const CAction &action);
   bool OnAction(const CAction &action);
   void CheckShutdown();
+  // Check for hardware cursor
+  void CheckHardwareCursor();
   // Checks whether the screensaver and / or DPMS should become active.
   void CheckScreenSaverAndDPMS();
   void CheckPlayingProgress();
