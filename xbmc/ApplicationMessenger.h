@@ -67,6 +67,7 @@ class CGUIMessage;
 
 #define TMSG_SHUTDOWN             300
 #define TMSG_POWERDOWN            301
+#define TMSG_DESKTOP              801
 #define TMSG_QUIT                 302
 #define TMSG_HIBERNATE            303
 #define TMSG_SUSPEND              304
@@ -170,6 +171,7 @@ public:
   void SetGUILanguage(const std::string &strLanguage);
   void Shutdown();
   void Powerdown();
+  void Desktop();
   void Quit();
   void Hibernate();
   void Suspend();

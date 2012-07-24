@@ -250,6 +250,13 @@ case TMSG_POWERDOWN:
         g_powerManager.Powerdown();
       }
       break;
+      
+    case TMSG_DESKTOP:
+      {
+        g_Windowing.ShowDesktop();
+        g_windowManager.ActivateWindow(WINDOW_HOME);
+      }
+      break;      
 
     case TMSG_QUIT:
       {
@@ -1037,6 +1044,12 @@ void CApplicationMessenger::Shutdown()
 void CApplicationMessenger::Powerdown()
 {
   ThreadMessage tMsg = {TMSG_POWERDOWN};
+  SendMessage(tMsg);
+}
+
+void CApplicationMessenger::Desktop()
+{
+  ThreadMessage tMsg = {TMSG_DESKTOP};
   SendMessage(tMsg);
 }
 

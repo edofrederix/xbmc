@@ -157,6 +157,17 @@ bool CWinSystemX11::DestroyWindow()
   return true;
 }
 
+bool CWinSystemX11::ShowDesktop()
+{
+  int i;
+  CLog::Log(LOGDEBUG, "Going to desktop session");
+  i = system("/usr/lib/xbmc/desktop-switch");
+
+  //enable status check (only run when we are on desktop)
+  m_bPerformCheck = true;
+  return true;
+}
+
 bool CWinSystemX11::ResizeWindow(int newWidth, int newHeight, int newLeft, int newTop)
 {
   if(m_nWidth  == newWidth
