@@ -91,7 +91,7 @@
       <numpadseven>Number7</numpadseven>
       <numpadeight>Number8</numpadeight>
       <numpadnine>Number9</numpadnine>
-      <backslash>ToggleFullScreen</backslash>
+      <!--<backslash>ToggleFullScreen</backslash>-->
       <home>FirstPage</home>
       <end>LastPage</end>
       <!-- Multimedia keyboard keys -->
@@ -102,6 +102,9 @@
       <browser_search/>
       <browser_favorites>ActivateWindow(Favourites)</browser_favorites>
       <browser_home>XBMC.ActivateWindow(Home)</browser_home>
+      <F12>XBMC.ActivateWindow(Home)</F12>
+      <key id='61624'>XBMC.ActivateWindow(Home)</key>
+      <key id='61625'>Desktop()</key>
       <volume_mute>Mute</volume_mute>
       <volume_down>VolumeDown</volume_down>
       <volume_up>VolumeUp</volume_up>
@@ -141,6 +144,7 @@
       <a mod="ctrl">Notification(MCEKeypress, Radio, 3)</a>
       <u mod="ctrl">Notification(MCEKeypress, DVD subtitle, 3)</u>
       <a mod="ctrl,shift">Notification(MCEKeypress, DVD audio, 3)</a>
+      <d mod="alt">Desktop()</d>
     </keyboard>
   </global>
   <LoginScreen>
