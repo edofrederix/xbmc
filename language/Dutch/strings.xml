@@ -2,7 +2,7 @@
 <!--Language file translated with Team XBMC Translator-->
 <strings>
   <string id="0">Programma's</string>
-  <string id="1">Afbeeldingen</string>
+  <string id="1">Foto's</string>
   <string id="2">Muziek</string>
   <string id="3">Video's</string>
   <string id="4">TV-gids</string>
@@ -275,7 +275,7 @@
   <string id="306">Non-Interleaved</string>
 
   <string id="312">(0=auto)</string>
-  <string id="313">Bibliotheek opschonen</string>
+  <string id="313">Bieb opschonen</string>
   <string id="314">Voorbereiden...</string>
   <string id="315">Blbliotheekfout</string>
   <string id="316">Zoeken op nummers...</string>
@@ -323,7 +323,7 @@
   <string id="361">Map Diavoorst.</string>
   <string id="362">Doorzichtigheid schermbeveiliging</string>
   <string id="363">Sorteer: Bestand</string>
-  <string id="364">- Versterker ondersteunt AC3</string>
+  <string id="364">- Versterker ondersteunt Dolby Digital</string>
   <string id="365">Sorteer: Naam</string>
   <string id="366">Sorteer: Jaar</string>
   <string id="367">Sorteer: Waardering</string>
@@ -350,7 +350,7 @@
   <string id="388">Vroeg</string>
   <string id="389">Buien</string>
   <string id="390">Natte Sneeuw</string>
-  <string id="391">Min</string>
+  <string id="391">Min.</string>
   <string id="392">Gem.</string>
   <string id="393">Max.</string>
   <string id="394">Mist</string>
@@ -436,7 +436,7 @@
   <string id="479">Skin en taal</string>
   <string id="480">Uiterlijk</string>
   <string id="481">Geluidsinstellingen</string>
-  <string id="482">Over XBMC</string>
+  <string id="482">Over mPossible</string>
 
   <string id="485">Album verwijderen</string>
   <string id="486">Herhalen</string>
@@ -652,7 +652,7 @@
   <string id="746">Wissel naar bestandsweergave</string>
   <string id="747">Fout tijdens het laden van de afbeelding</string>
   <string id="748">Snelkoppeling wijzingen</string>
-  <string id="749">Spiegel afbeelding</string>
+  <string id="749">Spiegel foto</string>
   <string id="750">Weet u het zeker?</string>
   <string id="751">Snelkoppeling verwijderen</string>
 
@@ -711,7 +711,7 @@
   <string id="999">Videos Toevoegen...</string>
   <string id="1000">- Test schermbeveiliging</string>
   <string id="1001">Verbinding mislukt</string>
-  <string id="1002">XBMC kon niet verbinden met de netwerklocatie.</string>
+  <string id="1002">mPossible kon niet verbinden met de netwerklocatie.</string>
   <string id="1003">Dit kan veroorzaakt worden doordat het netwerk niet verbonden is.</string>
   <string id="1004">Wilt u het toch toevoegen?</string>
 
@@ -739,8 +739,8 @@
   <string id="1027">Locatie aanpassen</string>
   <string id="1028">Pas %s locatie aan</string>
   <string id="1029">Nieuw label opgeven</string>
-  <string id="1030">Bladeren voor een afbeelding</string>
-  <string id="1031">Bladeren voor een afbeeldingenmap</string>
+  <string id="1030">Bladeren voor een foto</string>
+  <string id="1031">Bladeren voor een fotomap</string>
   <string id="1032">Netwerklocatie toevoegen...</string>
   <string id="1033">Bestand selecteren</string>
   <string id="1034">Submenu</string>
@@ -748,13 +748,13 @@
   <string id="1036">Favorieten</string>
   <string id="1037">Video add-ons</string>
   <string id="1038">Audio add-ons</string>
-  <string id="1039">Afbeeldingen add-ons</string>
+  <string id="1039">Foto add-ons</string>
   <string id="1040">Map laden</string>
   <string id="1041">%i items ontvangen</string>
   <string id="1042">%i van %i items ontvangen</string>
   <string id="1043">Programma add-ons</string>
-  <string id="1044">Plugin-afbeelding instellen</string>
-  <string id="1045">Addon-instelingen</string>
+  <string id="1044">Plugin-foto instellen</string>
+  <string id="1045">Addon-instellingen</string>
   <string id="1046">Draadloze Netwerken</string>
   <string id="1047">Andere...</string>
   <string id="1048">- Gebruikersnaam</string>
@@ -773,27 +773,27 @@
   <string id="1210">Verwijder</string>
   <string id="1211">Muziek</string>
   <string id="1212">Video</string>
-  <string id="1213">Afbeeldingen</string>
+  <string id="1213">Foto's</string>
   <string id="1214">Bestanden</string>
   <string id="1215">Muziek en video's</string>
-  <string id="1216">Muziek en afbeeldingen</string>
+  <string id="1216">Muziek en foto's</string>
   <string id="1217">Muziek en bestanden</string>
-  <string id="1218">Video en afbeeldingen</string>
+  <string id="1218">Video en foto's</string>
   <string id="1219">Video - Bestanden</string>
-  <string id="1220">Afbeeldingen en bestanden</string>
-  <string id="1221">Muziek, video's en afbeeldingen</string>
-  <string id="1222">Muziek, video's, afbeeldingen en bestanden</string>
+  <string id="1220">Foto's en bestanden</string>
+  <string id="1221">Muziek, video's en foto's</string>
+  <string id="1222">Muziek, video's, foto's en bestanden</string>
   <string id="1223">Uitgeschakeld</string>
   <string id="1226">Bestanden, muziek en video</string>
-  <string id="1227">Bestanden, afbeeldingen en muziek</string>
-  <string id="1228">Bestanden, afbeeldingen en video</string>
+  <string id="1227">Bestanden, foto's en muziek</string>
+  <string id="1228">Bestanden, foto's en video</string>
   <string id="1229">Muziek en programma's</string>
   <string id="1230">Video en programma's</string>
-  <string id="1231">Afbeeldingen en programma's</string>
-  <string id="1232">Muziek, video, afbeeldingen en programma's</string>
+  <string id="1231">Foto's en programma's</string>
+  <string id="1232">Muziek, video, foto's en programma's</string>
   <string id="1233">Programma's, video en muziek</string>
-  <string id="1234">Programma's, afbeeldingen en muziek</string>
-  <string id="1235">Programma's, afbeeldingen en video's</string>
+  <string id="1234">Programma's, foto's en muziek</string>
+  <string id="1235">Programma's, foto's en video's</string>
 
   <string id="1250">Systeem detecteren</string>
   <string id="1251">Aangesloten systemen automatisch detecteren</string>
@@ -856,7 +856,7 @@
 
   <string id="10000">Beginscherm</string>
   <string id="10001">Programma's</string>
-  <string id="10002">Afbeeldingen</string>
+  <string id="10002">Foto's</string>
   <string id="10003">Bestandsbeheer</string>
   <string id="10004">Instellingen</string>
   <string id="10005">Muziek</string>
@@ -866,7 +866,7 @@
   <string id="10009">Instellingen - Beeld</string>
   <string id="10010">Instellingen - GUI-kalibratie</string>
   <string id="10011">Instellingen - Schermkalibratie</string>
-  <string id="10012">Instellingen - Afbeeldingen</string>
+  <string id="10012">Instellingen - Foto's</string>
   <string id="10013">Instellingen - Programma's</string>
   <string id="10014">Instellingen - Weer</string>
   <string id="10015">Instellingen - Muziek</string>
@@ -962,20 +962,20 @@
   <string id="12344">Ingevoerd wachtwoord klopt niet.</string>
   <string id="12345">Toegang geweigerd</string>
   <string id="12346">Maximaal aantal pogingen bereikt</string>
-  <string id="12347">XBMC wordt nu uitgeschakeld.</string>
+  <string id="12347">mPossible wordt nu uitgeschakeld.</string>
   <string id="12348">Item vergrendeld</string>
   <string id="12353">Vergrendeling heractiveren</string>
   <string id="12356">Vergrendeling veranderen</string>
   <string id="12357">Vergrendeling delen</string>
   <string id="12358">Geen wachtwoord ingegeven. Probeer opnieuw.</string>
   <string id="12360">Vergrendelen</string>
-  <string id="12362">XBMC uitschakelen na max. aantal mislukte pogingen</string>
+  <string id="12362">mPossible uitschakelen na max. aantal mislukte pogingen</string>
   <string id="12367">Vergrendelcode is onjuist!</string>
   <string id="12368">Voer een geldige vergrendelcode in!</string>
   <string id="12373">Instellingen vergrendelen</string>
   <string id="12376">Als standaard instellen voor alle video's</string>
   <string id="12377">Dit zal alle voorgaande opgeslagen waarden resetten</string>
-  <string id="12378">Afbeeldingen weergeven gedurende</string>
+  <string id="12378">Foto's weergeven gedurende</string>
   <string id="12379">Pan- en zoomeffecten gebruiken</string>
 
   <string id="12383">12-uursformaat</string>
@@ -1004,10 +1004,10 @@
 
   <string id="13008">Standaard afsluitmethode</string>
   <string id="13009">Afsluiten</string>
-  <string id="13010">Sluimerstand</string>
-  <string id="13011">Slaapstand</string>
-  <string id="13012">Stoppen</string>
-  <string id="13013">Opnieuw opstarten</string>
+  <string id="13010">Slaapstand</string>
+  <string id="13011">Stand-by</string>
+  <string id="13012">mPossible afsluiten<</string>
+  <string id="13013">mPossible herstarten</string>
   <string id="13014">Minimaliseren</string>
   <string id="13015">Actie voor aan/uitknop</string>
   <string id="13016">Systeem Uitschakelen</string>
@@ -1171,7 +1171,7 @@
   <string id="13356">Hardware Overlays</string>
   <string id="13357">Hoge kwaliteit Pixel Shader</string>
   <string id="13358">Item afspelen</string>
-  <string id="13359">Afbeelding artiest instellen</string>
+  <string id="13359">Foto artiest instellen</string>
   <string id="13360">Miniaturen automatisch aanmaken</string>
   <string id="13361">Stem inschakelen</string>
 
@@ -1206,7 +1206,7 @@
   <string id="13403">Standaard leegmaken</string>
   <string id="13404">Hervatten</string>
   <string id="13405">Miniaturen</string>
-  <string id="13406">Afbeeldingsinformatie</string>
+  <string id="13406">Fotoinformatie</string>
   <string id="13407">%s presets</string>
   <string id="13408">IMDb-score</string>
   <string id="13409">Top 250</string>
@@ -2274,7 +2274,7 @@
   <string id="33017">Herstart plugin om deze in te schakelen</string>
   <string id="33018">Vannacht</string>
   <string id="33019">Morgennacht</string>
-  <string id="33020">Voorwaarde</string>
+  <string id="33020">Omstandigheden</string>
   <string id="33021">Neerslag</string>
   <string id="33022">Neersl.</string>
   <string id="33023">Vochtigheid</string>
