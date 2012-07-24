@@ -132,6 +132,7 @@ do
     LOOP=1
   elif [ $(( ($RET >= 131 && $RET <= 136) || $RET == 139 )) = "1" ]
   then # Crashed with core dump
+    HOME=/home/media
     print_crash_report
   fi
 done
