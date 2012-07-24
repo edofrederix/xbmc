@@ -30,6 +30,9 @@ CRASHCOUNT=0
 LASTSUCCESSFULSTART=$(date +%s)
 HOME=/home/mpossible
 
+# Load usb devices
+sudo udevadm trigger
+
 while [ $(( $LOOP )) = "1" ]
 do
   $XBMC
@@ -44,7 +47,7 @@ do
       CRASHCOUNT=0
     else # at startup, look sharp
       CRASHCOUNT=$((CRASHCOUNT+1))
-      if [ $(($CRASHCOUNT >= 3)) = "1" ]; then # Too many, bail out
+      if [ $(($CRASHCOUNT >= 1)) = "1" ]; then # Too many, bail out
         LOOP=0
         echo "XBMC has exited uncleanly 3 times in the last ${DIFF} seconds."
         echo "Something is probably wrong"
