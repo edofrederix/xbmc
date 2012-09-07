@@ -165,7 +165,7 @@ bool XMLUtils::GetAdditiveString(const TiXmlNode* pRootNode, const char* strTag,
 bool XMLUtils::GetEncoding(const CXBMCTinyXML* pDoc, CStdString& strEncoding)
 {
   const TiXmlNode* pNode=NULL;
-  while ((pNode=pDoc->IterateChildren(pNode)) && pNode->Type()!=TiXmlNode::TINYXML_DECLARATION) {}
+  while ((pNode=pDoc->IterateChildren(pNode)) && pNode->Type()!=TiXmlNode::DECLARATION) {}
   if (!pNode) return false;
   const TiXmlDeclaration* pDecl=pNode->ToDeclaration();
   if (!pDecl) return false;

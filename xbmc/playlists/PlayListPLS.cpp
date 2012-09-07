@@ -316,7 +316,7 @@ bool CPlayListASX::LoadData(istream& stream)
       pChild = pNode->IterateChildren(pChild);
       if(pChild)
       {
-        if (pChild->Type() == TiXmlNode::TINYXML_ELEMENT)
+        if (pChild->Type() == TiXmlNode::ELEMENT)
         {
           value = pChild->Value();
           value.ToLower();

@@ -522,7 +522,7 @@ bool CButtonTranslator::LoadKeymap(const CStdString &keymapPath)
   TiXmlNode* pWindow = pRoot->FirstChild();
   while (pWindow)
   {
-    if (pWindow->Type() == TiXmlNode::TINYXML_ELEMENT)
+    if (pWindow->Type() == TiXmlNode::ELEMENT)
     {
       int windowID = WINDOW_INVALID;
       const char *szWindow = pWindow->Value();
@@ -572,7 +572,7 @@ bool CButtonTranslator::LoadLircMap(const CStdString &lircmapPath)
   TiXmlNode* pRemote = pRoot->FirstChild();
   while (pRemote)
   {
-    if (pRemote->Type() == TiXmlNode::TINYXML_ELEMENT)
+    if (pRemote->Type() == TiXmlNode::ELEMENT)
     {
       const char *szRemote = pRemote->Value();
       if (szRemote)

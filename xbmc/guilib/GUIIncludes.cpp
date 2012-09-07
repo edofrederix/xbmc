@@ -265,7 +265,7 @@ void CGUIIncludes::ResolveIncludesForNode(TiXmlElement *node)
     attribute = attribute->Next();
   }
   // also do the value
-  if (node->FirstChild() && node->FirstChild()->Type() == TiXmlNode::TINYXML_TEXT && m_constantNodes.count(node->ValueStr()))
+  if (node->FirstChild() && node->FirstChild()->Type() == TiXmlNode::TEXT && m_constantNodes.count(node->ValueStr()))
     node->FirstChild()->SetValue(ResolveConstant(node->FirstChild()->ValueStr()));
 }
 
