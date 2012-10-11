@@ -433,10 +433,8 @@ void CGUISettings::Initialize()
   CSettingsCategory* ao = AddCategory(4, "audiooutput", 772);
 
   map<int,int> audiomode;
-  audiomode.insert(make_pair(338,AUDIO_ANALOG));
   audiomode.insert(make_pair(339,AUDIO_IEC958));
-  audiomode.insert(make_pair(420,AUDIO_HDMI  ));
-  AddInt(ao, "audiooutput.mode", 337, AUDIO_ANALOG, audiomode, SPIN_CONTROL_TEXT);
+  AddInt(NULL, "audiooutput.mode", 337, AUDIO_IEC958, audiomode, SPIN_CONTROL_TEXT);
 
   map<int,int> channelLayout;
   for(int layout = 0; layout < PCM_MAX_LAYOUT; ++layout)
@@ -459,13 +457,10 @@ void CGUISettings::Initialize()
 #ifdef __APPLE__
   AddString(ao, "audiooutput.audiodevice", 545, "Default", SPIN_CONTROL_TEXT);
 #elif defined(_LINUX)
-  AddSeparator(ao, "audiooutput.sep1");
-  AddString(ao, "audiooutput.audiodevice", 545, "default", SPIN_CONTROL_TEXT);
-  AddString(ao, "audiooutput.customdevice", 1300, "", EDIT_CONTROL_INPUT);
-  AddSeparator(ao, "audiooutput.sep2");
-  AddString(ao, "audiooutput.passthroughdevice", 546, "iec958", SPIN_CONTROL_TEXT);
-  AddString(ao, "audiooutput.custompassthrough", 1301, "", EDIT_CONTROL_INPUT);
-  AddSeparator(ao, "audiooutput.sep3");
+  AddString(NULL, "audiooutput.audiodevice", 545, "default", SPIN_CONTROL_TEXT);
+  AddString(NULL, "audiooutput.customdevice", 1300, "", EDIT_CONTROL_INPUT);
+  AddString(NULL, "audiooutput.passthroughdevice", 546, "iec958", SPIN_CONTROL_TEXT);
+  AddString(NULL, "audiooutput.custompassthrough", 1301, "", EDIT_CONTROL_INPUT);
 #elif defined(_WIN32)
   AddString(ao, "audiooutput.audiodevice", 545, "Default", SPIN_CONTROL_TEXT);
 #endif
@@ -1351,6 +1346,12 @@ void CGUISettings::LoadFromXML(TiXmlElement *pRootElement, mapIter &it, bool adv
 
 void CGUISettings::SaveXML(TiXmlNode *pRootNode)
 {
+  //mPossible Synergy modification: digital sound over pulseaudio
+  SetInt("audiooutput.mode", 1);
+  SetString("audiooutput.customdevice", "pulse:default@default");
+  SetString("audiooutput.custompassthrough", "pulse:default@default");
+  CLog::Log(LOGDEBUG, "mPossible custom audio output device settings");
+  
   for (mapIter it = settingsMap.begin(); it != settingsMap.end(); it++)
   {
     // don't save advanced settings
