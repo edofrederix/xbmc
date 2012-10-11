@@ -1,6 +1,9 @@
 # global patterns
 testMain
 
+# mPossible
+*.deb
+
 # commonly used editors
 # vim
 *.swp

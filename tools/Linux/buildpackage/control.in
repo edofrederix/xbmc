@@ -1,0 +1,15 @@
+Package: <!-- packagename -->
+Version: <!-- version -->
+Architecture: <!-- architecture -->
+Maintainer: Edo Frederix <edofrederix@gmail.com>
+Original-Maintainer: Team XBMC <team-xbmc@lists.launchpad.net>
+Depends: mesa-utils, x11-utils, ttf-liberation, ttf-dejavu-core, python-imaging, python, python-support (>= 0.90.0), libafpclient0, libdvdread4, libasound2 (>= 1.0.23), libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavcodec53 (>= 4:0.8-1~) | libavcodec-extra-53 (>= 4:0.8-1~), libavfilter2 (>= 4:0.8-1~) | libavfilter-extra-2 (>= 4:0.8-1~), libavformat53 (>= 4:0.8-1~) | libavformat-extra-53 (>= 4:0.8-1~), libavutil51 (>= 4:0.8-1~) | libavutil-extra-51 (>= 4:0.8-1~), libbluetooth3 (>= 4.91), libc6 (>= 2.15), libcdio13, libdbus-1-3 (>= 1.0.2), libexpat1 (>= 1.95.8), libfreetype6 (>= 2.2.1), libfribidi0 (>= 0.19.2), libgcc1 (>= 1:4.1.1), libgcrypt11 (>= 1.4.5), libgl1-mesa-glx | libgl1, libglew1.6 (>= 1.6.0), libglu1-mesa | libglu1, libhal-storage1 (>= 0.5.8.1), libhal1 (>= 0.5.8.1), libjpeg8 (>= 8c), liblzo2-2, libmicrohttpd5, libmysqlclient18 (>= 5.5.13-1), libpcre3 (>= 8.10), libpcrecpp0 (>= 7.7), libpng12-0 (>= 1.2.13-4), libpostproc52 (>= 4:0.8-1~) | libpostproc-extra-52 (>= 4:0.8-1~), libpulse0 (>= 1:1.0), libpython2.7 (>= 2.7), libsamplerate0 (>= 0.1.7), libsdl-mixer1.2, libsdl1.2debian (>= 1.2.10-1), libsmbclient (>= 2:3.2.0), libsqlite3-0 (>= 3.6.11), libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6), libswscale2 (>= 4:0.8-1~) | libswscale-extra-2 (>= 4:0.8-1~), libtiff4, libtinyxml2.6.2, libudev0 (>= 147), libva-glx1, libva1 (>> 1.0.15~), libx11-6, libxext6, libxmu6, libxrandr2 (>= 2:1.2.0), libyajl1 (>= 1.0.5), zlib1g (>= 1:1.1.4)
+Recommends: libass4 (>= 0.9.7), libcec1, libcurl3-gnutls (>= 7.16.2-1), libnfs1, libplist1 (>= 0.13), librtmp0 (>= 2.3), libshairport1, libvdpau1 (>= 0.2)
+Conflicts: xbmc, xbmc-bin, xbmc-common
+Replaces: xbmc, xbmc-bin, xbmc-common
+Provides: xbmc, xbmc-bin, xbmc-common
+Section: video
+Priority: optional
+Homepage: http://www.mpossible.nl
+Description: XBMC Media Center (binary data package)
+ Modification of XBMC media center by mPossible
