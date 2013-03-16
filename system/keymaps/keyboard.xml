@@ -111,6 +111,7 @@
       <F12>XBMC.ActivateWindow(Home)</F12>
       <key id='61624'>XBMC.ActivateWindow(Home)</key>
       <key id='61625'>Desktop()</key>
+      <key id='61631'>Desktop()</key>
       <volume_mute>Mute</volume_mute>
       <volume_down>VolumeDown</volume_down>
       <volume_up>VolumeUp</volume_up>
@@ -119,7 +120,6 @@
       <stop>Stop</stop>
       <play_pause>Pause</play_pause>
       <launch_mail></launch_mail>
-      <launch_media_select>XBMC.ActivateWindow(MyMusic)</launch_media_select>
       <launch_app1_pc_icon>ActivateWindow(MyPrograms)</launch_app1_pc_icon>
       <launch_app2_pc_icon>ActivateWindow(MyPrograms)</launch_app2_pc_icon>
       <launch_file_browser/>
